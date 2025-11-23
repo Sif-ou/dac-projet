@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" prefHeight="636.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FileLoader">
+   <children>
+   
+   
+      <MenuBar maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="New Folder" />
+                  <MenuItem mnemonicParsing="false" text="Open Folder" />
+                  <MenuItem mnemonicParsing="false" text="Close Folder" />
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  
+                  <MenuItem fx:id="file_load" mnemonicParsing="false" onAction="#LoadFile" text="Load File" />
+                 
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  
+                  <MenuItem mnemonicParsing="false" text="Safe as" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="undo" />
+                  <MenuItem mnemonicParsing="false" text="redo" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+               <items>
+                  <Menu mnemonicParsing="false" text="Appearance">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="theme Appearance in the box , why the size ??" />
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      
+      
+      
+      <ToolBar layoutY="26.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <Button fx:id="load_file" accessibleRole="IMAGE_VIEW" mnemonicParsing="false" onMouseClicked="#LoadFile" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/new-file-icon_.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/folder_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+        </items>
+      </ToolBar>
+      <AnchorPane layoutX="8.0" layoutY="69.0" prefHeight="566.0" prefWidth="232.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="72.0">
+         <children>
+            <TreeView fx:id="package_exp" layoutX="-6.0" layoutY="14.0" onContextMenuRequested="#SelectFile" onMouseClicked="#SelectFile" prefHeight="554.0" prefWidth="215.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="text_display" layoutX="230.0" layoutY="74.0" prefHeight="554.0" prefWidth="622.0" AnchorPane.bottomAnchor="7.600000000000023" AnchorPane.leftAnchor="229.80000000000007" AnchorPane.rightAnchor="8.600000000000023" AnchorPane.topAnchor="73.60000000000002" />
+   </children>
+</AnchorPane>
